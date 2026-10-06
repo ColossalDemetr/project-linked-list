@@ -9,6 +9,31 @@ class LinkedList {
     constructor () {
         this.head = null;
     };
+
+    append(value) {
+
+        const newNode = new Node(value);
+        let current = this.head;
+
+        // Base
+
+        if (this.head === null) { 
+            this.head = newNode;
+            return;
+        };
+
+        // —————————————————————————
+
+        while (current.nextNode !== null) {
+            current = current.nextNode;
+        };
+
+        current.nextNode = newNode;
+
+    };
+
+
+
 };
 
 export { Node, LinkedList };
