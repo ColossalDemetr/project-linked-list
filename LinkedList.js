@@ -42,7 +42,25 @@ class LinkedList {
 
     };
 
+    // Size
+    size() {
 
+        let i = 0;
+        let current = this.head;
+
+        // Base case
+        if (current === null) { return; };
+
+        // —————————————————————————
+        while (current !== null) {
+
+            current = current.nextNode;
+            i++;
+
+        };
+
+        return i;
+    };
 
 };
 

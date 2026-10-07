@@ -8,5 +8,7 @@ list.append("elephant");
 list.prepend("bark");
 list.prepend("bite");
 
+console.log(list.size());
+
 
 console.log(list.head);
