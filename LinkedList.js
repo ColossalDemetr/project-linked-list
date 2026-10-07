@@ -62,6 +62,20 @@ class LinkedList {
         return i;
     };
 
+    // Head
+    getHead() {
+        const current = this.head;
+
+        // Base
+        if (this.head === null) { return undefined;};
+
+        // —————————————————————————
+        const result = current.value;
+
+        return result;
+
+    };
+
 };
 
 export { Node, LinkedList };

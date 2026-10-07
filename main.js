@@ -9,6 +9,4 @@ list.prepend("bark");
 list.prepend("bite");
 
 console.log(list.size());
-
-
-console.log(list.head);
+console.log(list.getHead());
