@@ -76,6 +76,23 @@ class LinkedList {
 
     };
 
+    // Tail
+    tail() {
+        let current = this.head;
+
+        // Base
+        if (this.head === null) { return undefined;};
+
+        // —————————————————————————
+        while(current.nextNode !== null) {
+            current = current.nextNode;
+        };
+
+        const result = current.value;
+        return result;
+
+    };
+
 };
 
 export { Node, LinkedList };

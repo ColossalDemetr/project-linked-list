@@ -10,3 +10,4 @@ list.prepend("bite");
 
 console.log(list.size());
 console.log(list.getHead());
+console.log(list.tail());
