@@ -168,6 +168,27 @@ class LinkedList {
 
     };
 
+
+    // toString
+    toString() {
+
+        let current = this.head;
+        let i = 0;
+        let result = '';
+
+        while (i < this.size()) {
+            result += `( ${current.value} ) -> `;
+            
+            current = current.nextNode;
+            i++;
+        }
+
+        result += 'null';
+
+        return result;
+
+    };
+
 };
 
 export { Node, LinkedList };
