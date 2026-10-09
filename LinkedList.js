@@ -93,6 +93,7 @@ class LinkedList {
 
     };
 
+    // At
     at(index){
         let current = this.head;
         let i = 0;
@@ -106,8 +107,26 @@ class LinkedList {
 
         return current.value;
 
+    };
+
+    // Pop
+    pop() {
+        let current = this.head;
+
+        // Base
+        if(this.size() === 0) return undefined;
+
+        // Save head before changing
+        const result = current.value;
+        // Change head
+        this.head = this.head.nextNode;
+        
+        const resultText = `Popped item was '${result}'`
+
+        return resultText;
 
     };
+
 
 };
 
