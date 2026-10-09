@@ -111,13 +111,13 @@ class LinkedList {
 
     // Pop
     pop() {
-        let current = this.head;
+        let oldHead = this.head;
 
         // Base
         if(this.size() === 0) return undefined;
 
         // Save head before changing
-        const result = current.value;
+        const result = oldHead.value;
         // Change head
         this.head = this.head.nextNode;
         
@@ -127,6 +127,27 @@ class LinkedList {
 
     };
 
+
+    // Contains
+    contains(valueOf) {
+
+        let current = this.head;
+
+        if (current.value === valueOf) {return true} else {
+
+            while(current !== null && current.value !== valueOf) {
+            
+                current = current.nextNode;
+
+            };
+        };
+
+
+        const result = current === null ? false : true;
+
+        return result;
+
+    };
 
 };
 

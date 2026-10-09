@@ -9,9 +9,10 @@ list.append("kitty");
 list.append("elephant");
 
 
-console.log(list.size());
-console.log(list.getHead());
-console.log(list.tail());
-console.log(list.at(3));
-console.log(list.at(10));
-console.log(list.pop());
+// console.log(list.size());
+// console.log(list.getHead());
+// console.log(list.tail());
+console.log(list.at(4));
+// console.log(list.at(10));
+// console.log(list.pop());
+console.log(list.contains('baby'));
