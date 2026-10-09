@@ -142,10 +142,29 @@ class LinkedList {
             };
         };
 
-
         const result = current === null ? false : true;
 
         return result;
+
+    };
+
+
+    // findIndex
+    findIndex(valueOf) {
+
+        let current = this.head;
+        let i = 0;
+
+        if (current.value === valueOf) return 0;
+
+        while (valueOf !== current.value) {
+            current = current.nextNode;
+            i++;
+
+            if (current === null) return -1;
+        }
+
+        return i;
 
     };
 
