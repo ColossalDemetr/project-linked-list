@@ -32,6 +32,7 @@ class LinkedList {
         current.nextNode = newNode;
     };
 
+
     // Prepend
     prepend(value) {
         const newNode = new Node(value);
@@ -41,6 +42,7 @@ class LinkedList {
         this.head = newNode;
 
     };
+
 
     // Size
     size() {
@@ -62,6 +64,7 @@ class LinkedList {
         return i;
     };
 
+
     // Head
     getHead() {
         const current = this.head;
@@ -75,6 +78,7 @@ class LinkedList {
         return result;
 
     };
+
 
     // Tail
     tail() {
@@ -93,6 +97,7 @@ class LinkedList {
 
     };
 
+
     // At
     at(index){
         let current = this.head;
@@ -108,6 +113,7 @@ class LinkedList {
         return current.value;
 
     };
+
 
     // Pop
     pop() {
@@ -189,6 +195,28 @@ class LinkedList {
 
     };
 
+
+    // insertAt
+    insertAt(index, ...values) { // insertAt(4, '20', '27')
+
+        if (index < 0 || index > this.size()) throw new RangeError("Index out of bounds");
+
+        let current = this.head;
+        let i = 0;
+
+        while (i !== index - 1) {
+            current = current.nextNode;
+            i++;
+        };
+        
+        for (const element of values) {
+            const newNode = new Node(element);
+            newNode.nextNode = current.nextNode;
+            current.nextNode = newNode;
+            current = newNode;
+        };
+
+    };
 };
 
 export { Node, LinkedList };

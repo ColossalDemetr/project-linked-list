@@ -2,11 +2,11 @@ import { Node, LinkedList } from "./LinkedList.js";
 
 const list = new LinkedList();
 
-list.prepend("bark");
-list.prepend("bite"); // 1st Element
-list.append("dog");
-list.append("kitty");
-list.append("elephant");
+list.prepend("2");
+list.prepend("1"); // 1st Element
+list.append("3");
+list.append("4");
+list.append("5");
 
 
 // console.log(list.size());
@@ -18,4 +18,6 @@ list.append("elephant");
 // console.log(list.contains('baby'));
 // console.log(list.findIndex('bite'));
 // console.log(list.findIndex('babe'));
+console.log(list.insertAt(4, '20', '27'));
+console.log(list.insertAt(25, '20', '27'));
 console.log(list.toString());
