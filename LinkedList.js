@@ -217,6 +217,29 @@ class LinkedList {
         };
 
     };
+
+
+    // removeAt
+    removeAt(index) { // removeAt(3)
+
+        if (this.size() < index || index < 0) throw new RangeError("Index out of bounds");
+        
+
+        let current = this.head;
+        let i = 0;
+
+        while (i !== index - 1) {
+
+            current = current.nextNode;
+            i++;
+
+        };
+        // console.log(current.value);
+        current.nextNode = current.nextNode.nextNode;
+
+        
+
+    };
 };
 
 export { Node, LinkedList };
